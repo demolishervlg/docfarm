@@ -1,0 +1,40 @@
+.text-wrap   { white-space: normal !important; }
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+	.text#{$infix}-white 			{ color: $white !important; }
+	.text#{$infix}-main 			{ color: $body-color !important; }
+	@each $color, $value in $theme-colors {
+	  @include text-emphasis-variant(".text#{$infix}-#{$color}", $value);
+	}
+  }
+}
+
+.text-notransform{ text-transform: none !important; }
+
+.text-no-td{
+	text-decoration: none !important;
+	&:hover{
+		text-decoration: none !important;
+	}
+}
+
+.text-underline{
+	text-decoration: underline !important;
+	&:hover{
+		text-decoration: underline !important;
+	}
+}
+.text-dotted{
+	text-decoration-style: dotted !important;
+	&:hover{
+		text-decoration-style: dotted !important;
+	}
+}
+.text-dashed{
+	text-decoration-style: dashed !important;
+	&:hover{
+		text-decoration-style: dashed !important;
+	}
+}

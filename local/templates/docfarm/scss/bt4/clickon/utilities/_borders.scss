@@ -1,0 +1,11 @@
+@for $index from 1 through $count-borders-width-styles {
+	.border-#{$index} {
+  	  border-width: #{$index}px !important
+	}
+	@each $side, $value in $borders-sides {
+		.border-#{$side}-#{$index} {
+			border-#{$side}-width: #{$index}px !important;
+		}
+	}
+
+}

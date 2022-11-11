@@ -1,0 +1,48 @@
+//
+// z-indexes
+//
+
+@each $index, $value in $zindexes {
+  .zindex-#{$index}{
+		z-index: $value !important;
+  }
+}
+
+//
+// positions
+//
+$pos: () !default;
+$pos: map-merge((
+  "0": 0,
+  "5px": 5px,
+  "10px": 10px,
+  "15px": 15px,
+  "1": 1rem,
+  "2": 2rem
+), $pos);
+
+@each $index, $value in $pos {
+  .top-#{$index}{
+		top: $value !important;
+  }
+  .right-#{$index}{
+		right: $value !important;
+  }
+  .left-#{$index}{
+		left: $value !important;
+  }
+  .bottom-#{$index}{
+		bottom: $value !important;
+  }
+}
+.top-50p{
+	top: 50%;
+	transform: translateY(-50%);
+}
+.left-50p{
+	left: 50%;
+	transform: translateX(-50%);
+}
+.translate-center{
+	transform: translate(-50%, -50%);
+}

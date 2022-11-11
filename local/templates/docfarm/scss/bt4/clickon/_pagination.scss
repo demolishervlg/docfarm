@@ -1,0 +1,21 @@
+.pagination {
+	margin: 0px;
+}
+.page-link {
+	font-weight: $pagination-font-weight;
+    min-width: $pagination-link-min-width;
+    font-size: $pagination-link-font-size;
+	border: none;
+}
+.page-item {
+	&:first-child {
+	  .page-link {
+		@include border-left-radius(0);
+	  }
+	}
+	&:last-child {
+	  .page-link {
+		@include border-right-radius(0);
+	  }
+	}
+}

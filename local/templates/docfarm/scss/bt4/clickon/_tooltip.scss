@@ -1,0 +1,6 @@
+.tooltip-inner {
+    padding: $tooltip-padding-top $tooltip-padding-right $tooltip-padding-bottom $tooltip-padding-left;
+    text-align: left;
+    @include border-radius(0);
+	@include box-shadow($tooltip-shadow);
+}

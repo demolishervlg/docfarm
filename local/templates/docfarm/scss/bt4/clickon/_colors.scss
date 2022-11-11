@@ -1,0 +1,14 @@
+@each $gray, $val in $grays {
+	.bg-gray-#{$gray} {
+		background-color: $val;
+	}
+
+	.color-gray-#{$gray} {
+		color: $val;
+	}
+}
+
+
+.color-white {
+	color: $white;
+}

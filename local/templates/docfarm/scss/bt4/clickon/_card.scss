@@ -1,0 +1,21 @@
+.card{
+	border: none;
+	&-body{
+		border-bottom: $card-cap-show-border-width solid transparent;
+	}
+	.collapsing > .card-body,
+	.show > .card-body{
+		background-color: $card-body-show-bg-color;
+		border-bottom-color:$card-border-color;
+	}
+	&-header{
+		border-bottom: $card-border-width dashed $card-border-color;
+		border-top: $card-cap-show-border-width solid transparent;
+		transition: $transition-base;
+		&.show{
+	  	  background-color: $card-cap-show-bg;
+	  	  border-bottom-color: $card-cap-show-border-color;
+	  	  border-top-color: $card-border-color;
+	    }
+	}
+}

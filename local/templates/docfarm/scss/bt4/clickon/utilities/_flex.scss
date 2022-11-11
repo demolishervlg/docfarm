@@ -1,0 +1,21 @@
+$flex-basises: (
+	0:	0,
+	25:	25%,
+	50:	50%,
+	75:	75%,
+	100: 100%
+);
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+	.flex-grow#{$infix}-1{flex-grow: 1 !important;}
+
+	 @each $basis, $value in $flex-basises {
+		.flex-basis#{$infix}-#{$basis}{
+			flex-basis: $value !important;
+		}
+	}
+
+  }
+}

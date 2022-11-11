@@ -1,0 +1,19 @@
+.lpu-info-block {
+  background: #F8F8F8;
+  padding-top: 141px; }
+  .lpu-info-block__inner {
+    position: relative;
+    height: 550px; }
+  .lpu-info-block__content {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 64px;
+    background-color: #ffffff; }
+    .lpu-info-block__content .lpu-icon {
+      width: 10%; }
+    .lpu-info-block__content .lpu-description {
+      width: 70%; }
+    .lpu-info-block__content .lpu-map {
+      width: 20%; }

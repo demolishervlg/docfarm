@@ -1,0 +1,1445 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+	<title>DocFarm</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png"> 
+	<link rel="icon" type="image/vnd.microsoft.icon" href="/favicon-255x255.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ffffff">
+	<meta name="apple-mobile-web-app-title" content="DocFarm">
+	<meta name="application-name" content="DocFarm">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="/local/templates/docfarm/styles.css">
+	<link rel="stylesheet" href="/local/templates/docfarm/template_styles.css">
+	<link rel="stylesheet" href="/local/templates/docfarm/plugins/select2/select2.css">
+	<link rel="stylesheet" href="/local/templates/docfarm/css/forms.css">
+	
+	<!-- Только для этой страницы: -->
+	<link rel="stylesheet" href="/local/templates/docfarm/plugins/swiper/swiper-bundle.css">
+	<link rel="stylesheet" href="/local/templates/docfarm/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="/local/templates/docfarm/css/main.css">
+	
+	
+	<!-- Для попапов -->
+	<link rel="stylesheet" href="/local/templates/docfarm/plugins/magnific-popup/magnific-popup.css">
+	<link rel="stylesheet" href="/local/templates/docfarm/css/popups.css">
+</head>
+<body>
+	<div class="all">
+		<div class="wrapper">
+			<header class="header-main">
+				<div class="topbar">
+					<div class="container-fluid d-flex justify-content-between align-items-center">
+						<div class="topbar-location">
+							<a href="#pp-city" class="dotted popup-with-zoom">Волгоград</a>
+						</div>
+						<div class="topbar-phone">
+							<a href="tel:+78442735003">+7 (8442) 73-50-03</a>
+						</div>
+					</div>
+				</div>
+				<div class="container-fluid">
+				
+					<div class="header-inner">
+						<div class="logo-wrap">
+							<div class="logo">
+								<img src="/local/templates/docfarm/i/logo.svg" alt="DocFarm">
+							</div>
+							<div class="logo-subtitle">14,9 млн пациентов</div>
+						</div>
+						<div class="header-menu">
+							<ul class="nav">
+								<li class="nav-item">
+									<a href="#" class="nav-link">Врачи</a> 
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">Программы</a> 
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">Анализы</a> 
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">Клиники</a> 
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">Услуги</a> 
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">Медтуризм</a> 
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link nav-link-home">Выезд на дом</a> 
+								</li>
+							</ul>
+						</div>
+						<div class="header-personal">
+							<div class="header-personal__item">
+								<a href="#" class="header-personal__btn">  <!-- Если ссылка не нужна - меняем на div, оставляя класс -->
+									<div class="header-personal__icon"><i class="icon-heart-o"></i></div>
+									<div class="header-personal__info">Избранное</div>
+									<div class="header-personal__count">0</div>
+								</a>
+								<div class="header-favorites">
+									<div class="header-favorites__inner">
+										<div class="header-favorites__item">
+											<div class="header-favorites__item-img">
+												<a href="#"><img src="/local/templates/docfarm/sample/favorite1.jpg" alt=""></a>   <!-- 48x48 -->
+											</div>
+											<div class="header-favorites__item-info">
+												<div class="header-favorites__item-name">
+													<a href="#">Гутникова Виктория Яковлевна</a>
+												</div>
+												<div class="header-favorites__item-specialization">
+													<span>Педиатр</span>
+												</div>
+												<div class="header-favorites__item-order">
+													<a href="#" class="dotted">Записаться на прием</a>
+												</div>
+											</div>
+											<div class="header-favorites__item-del"><i class="icon-close"></i></div>
+										</div>
+										<div class="header-favorites__item">
+											<div class="header-favorites__item-img">
+												<a href="#"><img src="/local/templates/docfarm/sample/favorite2.jpg" alt=""></a>
+											</div>
+											<div class="header-favorites__item-info">
+												<div class="header-favorites__item-name">
+													<a href="#">Елизарова Людмила Александровна</a>
+												</div>
+												<div class="header-favorites__item-specialization">
+													<span>Акушер</span>
+													<span>Гинеколог</span>
+												</div>
+												<div class="header-favorites__item-order">
+													<a href="#" class="dotted">Записаться на прием</a>
+												</div>
+											</div>
+											<div class="header-favorites__item-del"><i class="icon-close"></i></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="header-personal__item">
+								<a href="#" class="header-personal__btn">
+									<div class="header-personal__icon"><i class="icon-cart"></i></div>
+									<div class="header-personal__info">Корзина пуста</div>
+									<!--
+										Если в корзине что-то есть, то пишем этот блок так:
+										
+										<div class="header-personal__info">
+											Сумма
+											<span>8440 руб.</span>
+										</div>
+									-->
+									<div class="header-personal__count">0</div>
+								</a>
+								<div class="header-cart">
+									<div class="header-cart__inner">
+										<div class="header-cart__title">
+											Корзина (2)
+										</div>
+										<div class="header-cart__list">
+											<ol>
+												<li>
+													<div class="header-cart__list-name">
+														<a href="#">Взятие крови</a> <!-- Если ссылка не нужна - заключить в span вот так: <span>Взятие крови</span> -->
+													</div>
+													<div class="header-cart__list-price">320 ₽</div>
+													<div class="header-cart__list-del"><i class="icon-close"></i></div>
+												</li>
+												<li>
+													<div class="header-cart__list-name">
+														<a href="#">ПЦР (COVID-19) результаты</a>
+													</div>
+													<div class="header-cart__list-price">8 120 ₽</div>
+													<div class="header-cart__list-del"><i class="icon-close"></i></div>
+												</li>
+											</ol>
+										</div>
+										<div class="header-cart__total">
+											<div>Итого:</div>
+											<div>8440 ₽</div>
+										</div>
+										<div class="header-cart__order">
+											<a href="#" class="btn btn-danger">Оформить</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="header-profile">
+							<div class="user-login-btn">
+								<a href="#"><span>Личный кабинет</span></a>
+							</div>
+						</div>
+						<a href="#" class="nav-btn-mobile"><span>&nbsp;</span></a>
+					</div>
+					
+				</div>
+				<div class="mobimenu">
+					<div class="mobimenu__header">
+						<div class="mobimenu__title">Меню</div>
+						<a href="#" class="mobimenu__close"><i class="icon-close"></i></a>
+					</div>
+					<div class="mobimenu__inner">
+						<div class="mobimenu__toppart">
+							<ul class="mobi-nav">
+								<li class="nav-item">
+									<a href="#" class="nav-link submenu-btn">Врачи</a> 
+									<div class="submenu">
+										<div class="submenu__header">
+											<div class="submenu__title">Врачи</div> <!-- Если надо - можно сделать ссылкой -->
+											<a href="#" class="submenu__back"><i class="icon-arrow-left"></i></a>
+										</div>
+										<ul class="mobi-nav">
+											<li class="nav-item">
+												<a href="#" class="nav-link">Терапевты</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Гинекологи</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Эндокринологи</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Хирурги</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Неврологи</a> 
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link submenu-btn">Check-UP программы</a>
+									<div class="submenu">
+										<div class="submenu__header">
+											<div class="submenu__title">Check-UP программы</div>
+											<a href="#" class="submenu__back"><i class="icon-arrow-left"></i></a>
+										</div>
+										<ul class="mobi-nav">
+											<li class="nav-item">
+												<a href="#" class="nav-link">Для мужчин</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Для женщин</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Гастро</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Диабет</a> 
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link submenu-btn">Анализы</a>
+									<div class="submenu">
+										<div class="submenu__header">
+											<div class="submenu__title">Анализы</div>
+											<a href="#" class="submenu__back"><i class="icon-arrow-left"></i></a>
+										</div>
+										<ul class="mobi-nav">
+											<li class="nav-item">
+												<a href="#" class="nav-link">Тесты на covid 19</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Анализ крови</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Венерологические анализы</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">На операцию</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Общие</a> 
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link submenu-btn">Клиники</a>
+									<div class="submenu">
+										<div class="submenu__header">
+											<div class="submenu__title">Клиники</div>
+											<a href="#" class="submenu__back"><i class="icon-arrow-left"></i></a>
+										</div>
+										<ul class="mobi-nav">
+											<li class="nav-item">
+												<a href="#" class="nav-link">Клиника Ткачева</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">idm clinic</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Клиника движение</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Диалайн</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Сова</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Медси</a> 
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link submenu-btn">Услуги</a>
+									<div class="submenu">
+										<div class="submenu__header">
+											<div class="submenu__title">Услуги</div>
+											<a href="#" class="submenu__back"><i class="icon-arrow-left"></i></a>
+										</div>
+										<ul class="mobi-nav">
+											<li class="nav-item">
+												<a href="#" class="nav-link">Вакцинация</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Гинекология</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Дерматология</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Накрология</a> 
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link submenu-btn">Пациентам</a>
+									<div class="submenu">
+										<div class="submenu__header">
+											<div class="submenu__title">Пациентам</div>
+											<a href="#" class="submenu__back"><i class="icon-arrow-left"></i></a>
+										</div>
+										<ul class="mobi-nav">
+											<li class="nav-item">
+												<a href="#" class="nav-link">Пункт 1</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Пункт 2</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Пункт 3</a> 
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link submenu-btn">О проекте</a>
+									<div class="submenu">
+										<div class="submenu__header">
+											<div class="submenu__title">О проекте</div>
+											<a href="#" class="submenu__back"><i class="icon-arrow-left"></i></a>
+										</div>
+										<ul class="mobi-nav">
+											<li class="nav-item">
+												<a href="#" class="nav-link">Что такое DocFarmMed</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Контакты</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Партнерство</a> 
+											</li>
+										</ul>
+									</div>
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link submenu-btn">Врачу</a>
+									<div class="submenu">
+										<div class="submenu__header">
+											<div class="submenu__title">Врачу</div>
+											<a href="#" class="submenu__back"><i class="icon-arrow-left"></i></a>
+										</div>
+										<ul class="mobi-nav">
+											<li class="nav-item">
+												<a href="#" class="nav-link">Пункт 1</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Пункт 2</a> 
+											</li>
+											<li class="nav-item">
+												<a href="#" class="nav-link">Пункт 3</a> 
+											</li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="mobimenu__bottompart">
+							<ul class="mobi-nav">
+								<li class="nav-item">
+									<a href="#pp-city" class="nav-link popup-with-zoom">
+										<span class="menu-icon"><i class="icon-place"></i></span>
+										Волгоград
+									</a> 
+								</li>
+								<li class="nav-item">
+									<a href="#" class="nav-link">
+										<span class="menu-icon"><i class="icon-user"></i></span>
+										Личный кабинет
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="tel:+78442735003" class="nav-link mobimenu-phone">
+										<span class="menu-icon"><i class="icon-phone"></i></span>
+										+7 (8442) 73-50-03
+										<span class="phone-desc">круглосуточная справочная служба</span>
+									</a> 
+								</li>
+							</ul>
+							<div class="creators">
+								<a href="https://clickon.ru/" target="_blank" class="clickon-logo">
+									<span>Создание сайта</span>
+									<svg width="90" height="30" viewBox="0 0 90 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M86.6596 2.78197V12.0616L77.5016 2.78197H75.8531V18.1554H79.192V8.63639L88.5959 18.3613H90.0001V2.78197H86.6596ZM63.5036 0C57.8167 0 53.1909 4.41316 53.1909 9.83664C53.1909 15.2601 57.8167 19.6733 63.5036 19.6733C63.7915 19.6733 64.0794 19.6589 64.3622 19.6398L64.3873 15.8299C64.0994 15.8666 63.8015 15.889 63.5053 15.889C60.0041 15.889 57.159 13.1724 57.159 9.83664C57.159 6.49924 60.0041 3.78271 63.5053 3.78271C67.0031 3.78271 69.8499 6.49924 69.8499 9.83664C69.8499 11.8764 68.7822 13.688 67.1554 14.7813L69.8801 17.5601C72.2767 15.7581 73.818 12.9665 73.818 9.83664C73.8147 4.41316 69.1889 0 63.5036 0Z" class="path-color"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12.6374 2.58882L11.3738 5.00209C10.691 4.3493 9.59141 4.02689 8.07513 4.02689C6.6375 4.02689 5.45761 4.60148 4.53713 5.74587C3.61665 6.89026 3.15976 8.3379 3.15976 10.092C3.15976 11.8429 3.58318 13.2331 4.43839 14.2625C5.29025 15.2904 6.42998 15.8076 7.85421 15.8076C9.4843 15.8076 10.7546 15.2617 11.6767 14.1684L13.1043 16.529C11.8575 17.7819 10.0265 18.4124 7.61656 18.4124C5.20657 18.4124 3.33381 17.6574 2.00163 16.1475C0.667767 14.6344 0 12.5771 0 9.9675C0 7.53826 0.739732 5.50965 2.2192 3.87686C3.69866 2.24407 5.58815 1.42847 7.89605 1.42847C9.8709 1.42688 11.4508 1.81472 12.6374 2.58882Z" fill="#363333"/><path fill-rule="evenodd" clip-rule="evenodd" d="M15.8894 1.65536L18.8332 0.981812V14.4815C18.8332 15.9594 19.3002 16.8421 20.234 17.1262C19.7755 17.937 18.9972 18.3392 17.896 18.3392C16.5588 18.3392 15.8877 17.4613 15.8877 15.6977V1.65536H15.8894Z" fill="#363333"/><path fill-rule="evenodd" clip-rule="evenodd" d="M23.2832 18.1348V8.41151H21.6682V6.11794H26.2639V18.1348H23.2832ZM24.8112 1.45898C25.2782 1.45898 25.6832 1.61859 26.0162 1.93621C26.3493 2.25224 26.5166 2.63689 26.5166 3.08379C26.5166 3.53229 26.3476 3.91695 26.0162 4.23616C25.6832 4.55378 25.2798 4.7118 24.8112 4.7118C24.3393 4.7118 23.9376 4.55378 23.6046 4.23616C23.2715 3.91854 23.1042 3.53389 23.1042 3.08379C23.1042 2.63689 23.2715 2.25224 23.6046 1.93621C23.9359 1.62019 24.3393 1.45898 24.8112 1.45898Z" fill="#363333"/><path fill-rule="evenodd" clip-rule="evenodd" d="M39.5572 7.07541L38.2986 9.16627C37.6091 8.54859 36.6819 8.24055 35.5221 8.24055C34.4058 8.24055 33.5272 8.59328 32.8795 9.30034C32.2301 10.0058 31.9071 10.9842 31.9071 12.2323C31.9071 14.7526 33.169 16.0119 35.6928 16.0119C36.784 16.0119 37.7463 15.6591 38.5798 14.9521L39.6643 17.1786C38.8057 17.6846 38.0626 18.007 37.42 18.1426C36.7807 18.2767 36.0242 18.3421 35.1539 18.3421C33.2075 18.3421 31.6728 17.8027 30.5448 16.7269C29.4185 15.648 28.8545 14.1524 28.8545 12.2339C28.8545 10.349 29.4721 8.82312 30.7005 7.66117C31.9339 6.49603 33.6109 5.91506 35.733 5.91506C37.2024 5.91187 38.4727 6.29971 39.5572 7.07541Z" fill="#363333"/><path fill-rule="evenodd" clip-rule="evenodd" d="M50.0924 18.1349L46.372 12.6938L44.9578 14.1175V18.1349H42.0139V1.65536L44.9578 0.981812V10.7291L49.1568 6.118H52.7132L48.4439 10.6716L53.5735 18.1349H50.0924Z" fill="#363333"/><path d="M63.5035 12.9586C65.3115 12.9586 66.7771 11.5608 66.7771 9.83665C66.7771 8.11246 65.3115 6.71472 63.5035 6.71472C61.6956 6.71472 60.23 8.11246 60.23 9.83665C60.23 11.5608 61.6956 12.9586 63.5035 12.9586Z" fill="#363333"/><path fill-rule="evenodd" clip-rule="evenodd" d="M65.5922 15.0223L74.7619 24.3738L70.0942 24.1328L72.3 29.2721L70.6013 30L68.4825 24.5765L65.5068 27.2898L65.5922 15.0223Z" fill="#363333" class="path-arrow"/>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			
+			
+			<div class="main-block">
+				<div class="container-fluid">
+					<div class="main-block__inner">
+						<div class="main-block__content">
+							<h1>Поиск врачей и клиник рядом с домом.</h1>
+							<div class="search-line">
+								<div class="search-form">
+									<form action="#">
+										<div class="d-flex justify-content-between align-items-center">
+											<div class="text-field">
+												<input type="text" placeholder="Клиника, врач, услуга, анализы, диагностика">
+											</div>
+											<input type="submit" class="btn btn-primary" value="Найти">
+										</div>
+									</form>
+								</div>
+								<div class="search-suggestions" style="display:none">  <!-- Это выпадашка с результатами поиска -->
+									<div class="ss-header">Специальности врачей</div>
+									<ul class="ss-list">
+										<li><a href="#" class="ss-title"><span class="ss-bold">Ак</span>ушер-гинеколог</a></li> <!-- Если ссылка не нужна - меняем на span или div -->
+										<li><a href="#" class="ss-title"><span class="ss-bold">Ак</span>ушерка</a></li>
+										<li><a href="#" class="ss-title">Тор<span class="ss-bold">ак</span>альный хирург взрослый</a></li>
+										<li><a href="#" class="ss-title">Тор<span class="ss-bold">ак</span>альный хирург детский</a></li>
+										<li><a href="#" class="ss-title">Семейный врач (Врач общей пр<span class="ss-bold">ак</span>тики)</a></li>
+									</ul>
+									<div class="ss-header">Врачи</div>
+									<ul class="ss-list ss-doctor">
+										<li>
+											<a href="#" class="ss-title">
+												<img class="ss-doctor-photo" src="/local/templates/docfarm/sample/ss-doctor1.jpg" alt="">
+												<div class="ss-doctor-info">
+													<div class="ss-doctor-name"><span class="ss-bold">Ак</span>опова Е.В.</div>
+													<div class="ss-doctor-spec">
+														<span>Лор</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="ss-title">
+												<img class="ss-doctor-photo" src="/local/templates/docfarm/sample/ss-doctor2.jpg" alt="">
+												<div class="ss-doctor-info">
+													<div class="ss-doctor-name"><span class="ss-bold">Ак</span>сененко Татьяна Николаевна</div>
+													<div class="ss-doctor-spec">
+														<span>гинеколог</span>
+														<span>акушер-гинеколог</span>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#" class="ss-title">
+												<img class="ss-doctor-photo" src="/local/templates/docfarm/i/no-photo48x48.png" alt="">
+												<div class="ss-doctor-info">
+													<div class="ss-doctor-name"><span class="ss-bold">Ак</span>имова Анна Александровна</div>
+													<div class="ss-doctor-spec">
+														<span>ревматолог</span>
+														<span>Врач узд</span>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+									<div class="ss-header">Клиники</div>
+									<ul class="ss-list">
+										<li><a href="#" class="ss-title"><span class="ss-bold">Ак</span>сон медицинский центр</a></li> <!-- Если ссылка не нужна - меняем на span или div -->
+									</ul>
+								</div>
+							</div>
+							<div class="search-params">
+								<a href="#pp-map" class="search-params__item popup-with-zoom">
+									<div class="search-params__icon"><i class="icon-map"></i></div>
+									<div class="search-params__text"><span>Поликлиники на карте</span></div>
+								</a>
+								<a href="#pp-params" class="search-params__item popup-with-zoom">
+									<div class="search-params__icon"><i class="icon-filter"></i></div>
+									<div class="search-params__text"><span>Фильтр по параметрам</span></div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="service-section">
+					<h2>Медицинские сервисы в <a href="#pp-city" class="dotted popup-with-zoom">Волгограде</a></h2>
+					<div class="service-slider-wrap">
+						<div class="service-slider swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="service-item">
+										<div class="service-item__title">
+											<div class="service-item__title-icon" style="background:#fef7f1">
+												<img src="/local/templates/docfarm/i/service-microscope.svg" alt="">
+											</div>
+											<div class="service-item__title-text">
+												<a href="#">Анализы</a>
+											</div>
+										</div>
+										<ul class="service-item__list">
+											<li><a href="#">Тесты на covid 19</a></li>
+											<li><a href="#">Анализ крови</a></li>
+											<li><a href="#">Венерологические анализы</a></li>
+											<li><a href="#">Общие</a></li>
+										</ul>
+										<div class="service-item__all">
+											<a href="#">Показать еще 38 услуг</a> в&nbsp;24&nbsp;клиниках
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="service-item">
+										<div class="service-item__title">
+											<div class="service-item__title-icon" style="background:#edf7f1">
+												<img src="/local/templates/docfarm/i/service-clinic.svg" alt="">
+											</div>
+											<div class="service-item__title-text">
+												<a href="#">Клиники</a>
+											</div>
+										</div>
+										<ul class="service-item__list">
+											<li><a href="#">Клиника Ткачева</a></li>
+											<li><a href="#">idm clinic</a></li>
+											<li><a href="#">Клиника движение</a></li>
+											<li><a href="#">Диалайн</a></li>
+										</ul>
+										<div class="service-item__all">
+											<a href="#">Показать еще 38 клиник</a> в&nbsp;г.&nbsp;Волгоград
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="service-item">
+										<div class="service-item__title">
+											<div class="service-item__title-icon" style="background:#ebf5fc">
+												<img src="/local/templates/docfarm/i/service-communication.svg" alt="">
+											</div>
+											<div class="service-item__title-text">
+												<a href="#">Онлайн консультации</a>
+											</div>
+										</div>
+										<ul class="service-item__list">
+											<li><a href="#">Психолог</a></li>
+											<li><a href="#">Невролог</a></li>
+											<li><a href="#">Дерматолог</a></li>
+											<li><a href="#">Венеролог</a></li>
+										</ul>
+										<div class="service-item__all">
+											<a href="#">Показать еще 69 специалистов</a> в&nbsp;24&nbsp;клиниках
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="service-item">
+										<div class="service-item__title">
+											<div class="service-item__title-icon" style="background:#fdefef">
+												<img src="/local/templates/docfarm/i/service-heart.svg" alt="">
+											</div>
+											<div class="service-item__title-text">
+												<a href="#">Check-up программы</a>
+											</div>
+										</div>
+										<ul class="service-item__list">
+											<li><a href="#">Для мужчин</a></li>
+											<li><a href="#">Для женщин</a></li>
+											<li><a href="#">Гастро</a></li>
+											<li><a href="#">Диабет</a></li>
+										</ul>
+										<div class="service-item__all">
+											<a href="#">Показать еще 158 услуг</a> в&nbsp;24&nbsp;клиниках
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="service-item">
+										<div class="service-item__title">
+											<div class="service-item__title-icon" style="background:#faf3fc">
+												<img src="/local/templates/docfarm/i/service-stethoscope.svg" alt="">
+											</div>
+											<div class="service-item__title-text">
+												<a href="#">Услуги</a>
+											</div>
+										</div>
+										<ul class="service-item__list">
+											<li><a href="#">Вакцинация</a></li>
+											<li><a href="#">Гинекология</a></li>
+											<li><a href="#">Дерматология</a></li>
+											<li><a href="#">Накрология</a></li>
+										</ul>
+										<div class="service-item__all">
+											<a href="#">Показать еще 68 услуг</a> в&nbsp;18&nbsp;клиниках
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="service-item">
+										<div class="service-item__title">
+											<div class="service-item__title-icon" style="background:#f1fbfe">
+												<img src="/local/templates/docfarm/i/service-travel.svg" alt="">
+											</div>
+											<div class="service-item__title-text">
+												<a href="#">Медтуризм</a>
+											</div>
+										</div>
+										<ul class="service-item__list">
+											<li><a href="#">Клиника № 1 ВОЛГГМУ</a></li>
+											<li><a href="#">СОВА-Академическая, 6А</a></li>
+											<li><a href="#">Областная клиническая больница</a></li>
+											<li><a href="#">Клиника Диалайн</a></li>
+										</ul>
+										<div class="service-item__all">
+											<a href="#">Показать еще 22 услуги</a> в&nbsp;12&nbsp;клиниках
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-nav service-nav">
+							<div class="swiper-pagination service-pagination"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="doctor-section">
+					<h2>Лучшие врачи <a href="#pp-city" class="dotted popup-with-zoom">Волгограда</a></h2>
+					<div class="doctor-slider-wrap">
+						<div class="doctor-slider swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="doctor-item">
+										<div class="doctor-item__img">
+											<a href="#"><img src="/local/templates/docfarm/sample/doctor1.jpg" alt=""></a>   <!-- 233x240 -->
+										</div>
+										<div class="doctor-item__expansion">
+											<div class="doctor-item__rating">3,8</div>
+											<div class="doctor-item__reviews"><a href="#">10 отзывов</a></div>
+										</div>
+										<div class="doctor-item__name">
+											<a href="#">Баранова Татьяна Николаевна</a>
+										</div>
+										<div class="doctor-item__specialization">
+											<span>Гинеколог</span>
+											<span>Гинеколог-эндокринолог</span>
+											<span>Сексолог</span>
+										</div>
+										<div class="doctor-item__clinic">
+											<div class="doctor-item__clinic-name">
+												<a href="#">Клиника движение</a>
+											</div>
+											<div class="doctor-item__clinic-address">ул. Рионская  д. 2</div>
+											<div class="doctor-item__clinic-price">
+												Прием от: <span>550 ₽</span>
+											</div>
+										</div>
+										<div class="doctor-item__order">
+											<a href="#" class="btn btn-primary"><span>Записаться на прием</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="doctor-item">
+										<div class="doctor-item__img">
+											<a href="#"><img src="/local/templates/docfarm/sample/doctor2.jpg" alt=""></a>
+										</div>
+										<div class="doctor-item__expansion">
+											<div class="doctor-item__rating">4,2</div>
+											<div class="doctor-item__reviews"><a href="#">3 отзыва</a></div>
+										</div>
+										<div class="doctor-item__name">
+											<a href="#">Гурьев Владимир Николаевич</a>
+										</div>
+										<div class="doctor-item__specialization">
+											<span>Венеролог</span>
+											<span>Дерматолог</span>
+										</div>
+										<div class="doctor-item__clinic">
+											<div class="doctor-item__clinic-name">
+												<a href="#">idm clinic</a>
+												<div class="choice-clinic">
+													<i class="icon-angle-down"></i>
+													<div class="doctor-item__clinics">
+														<div class="current"><a href="#" class="doctor-item__clinics-ttl">idm clinic</a></div>
+														<div><a href="#" class="doctor-item__clinics-ttl">Диалайн</a></div>
+														<div><a href="#" class="doctor-item__clinics-ttl">Областная больница №1</a></div>
+													</div>
+												</div>
+											</div>
+											<div class="doctor-item__clinic-address">ул. Невская  д. 13А</div>
+											<div class="doctor-item__clinic-price">
+												Прием от: <span>1200 ₽</span>
+											</div>
+										</div>
+										<div class="doctor-item__order">
+											<a href="#" class="btn btn-primary"><span>Записаться на прием</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="doctor-item">
+										<div class="doctor-item__img">
+											<a href="#"><img src="/local/templates/docfarm/sample/doctor3.jpg" alt=""></a>
+										</div>
+										<div class="doctor-item__expansion">
+											<div class="doctor-item__rating">4,2</div>
+											<div class="doctor-item__reviews"><a href="#">5 отзывов</a></div>
+										</div>
+										<div class="doctor-item__name">
+											<a href="#">Гутникова Виктория Яковлевна</a>
+										</div>
+										<div class="doctor-item__specialization">
+											<span>Гинеколог</span>
+											<span>Гинеколог-эндокринолог</span>
+										</div>
+										<div class="doctor-item__clinic">
+											<div class="doctor-item__clinic-name">
+												<a href="#">Клиника Ткачева</a>
+											</div>
+											<div class="doctor-item__clinic-address">ул. Новоузенская 24</div>
+											<div class="doctor-item__clinic-price">
+												Прием от: <span>бесплатно</span>
+											</div>
+										</div>
+										<div class="doctor-item__order">
+											<a href="#" class="btn btn-primary"><span>Записаться на прием</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="doctor-item">
+										<div class="doctor-item__img">
+											<a href="#"><img src="/local/templates/docfarm/sample/doctor4.jpg" alt=""></a>
+											<div class="badge">-25%</div>
+										</div>
+										<div class="doctor-item__expansion">
+											<div class="doctor-item__rating">4,9</div>
+											<div class="doctor-item__reviews"><a href="#">33 отзыва</a></div>
+										</div>
+										<div class="doctor-item__name">
+											<a href="#">Воротникова Ирина Валентиновна</a>
+										</div>
+										<div class="doctor-item__specialization">
+											<span>Пластический хирург</span>
+											<span>Хирург</span>
+										</div>
+										<div class="doctor-item__clinic">
+											<div class="doctor-item__clinic-name">
+												<a href="#">S class clinic</a>
+												<div class="choice-clinic">
+													<i class="icon-angle-down"></i>
+													<div class="doctor-item__clinics">
+														<div><a href="#" class="doctor-item__clinics-ttl">idm clinic</a></div>
+														<div><a href="#" class="doctor-item__clinics-ttl">Диалайн</a></div>
+														<div class="current"><a href="#" class="doctor-item__clinics-ttl">S class clinic</a></div>
+													</div>
+												</div>
+											</div>
+											<div class="doctor-item__clinic-address">ул. Невская  д. 13А</div>
+											<div class="doctor-item__clinic-price">
+												Прием от: <span>2500 ₽</span><span class="old-price">3250</span>
+											</div>
+										</div>
+										<div class="doctor-item__order">
+											<a href="#" class="btn btn-primary"><span>Записаться на прием</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="doctor-item">
+										<div class="doctor-item__img">
+											<a href="#"><img src="/local/templates/docfarm/sample/doctor5.jpg" alt=""></a>
+										</div>
+										<div class="doctor-item__expansion">
+											<div class="doctor-item__rating">4,0</div>
+											<div class="doctor-item__reviews"><a href="#">10 отзывов</a></div>
+										</div>
+										<div class="doctor-item__name">
+											<a href="#">Короткий Игорь Валентинович</a>
+										</div>
+										<div class="doctor-item__specialization">
+											<span>Пластический хирург</span>
+										</div>
+										<div class="doctor-item__clinic">
+											<div class="doctor-item__clinic-name">
+												<a href="#">Клиника Диалайн</a>
+											</div>
+											<div class="doctor-item__clinic-address">ул. Краснознаменская 48</div>
+											<div class="doctor-item__clinic-price">
+												Прием от: <span>1000 ₽</span>
+											</div>
+										</div>
+										<div class="doctor-item__order">
+											<a href="#" class="btn btn-primary"><span>Записаться на прием</span></a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="doctor-item">
+										<div class="doctor-item__img">
+											<a href="#"><img src="/local/templates/docfarm/sample/doctor6.jpg" alt=""></a>
+										</div>
+										<div class="doctor-item__expansion">
+											<div class="doctor-item__rating">4,8</div>
+											<div class="doctor-item__reviews"><a href="#">2 отзыва</a></div>
+										</div>
+										<div class="doctor-item__name">
+											<a href="#">Хазиахметов Александр Сергеевич</a>
+										</div>
+										<div class="doctor-item__specialization">
+											<span>Андролог</span>
+											<span>Венеролог</span>
+											<span>Уролог</span>
+										</div>
+										<div class="doctor-item__clinic">
+											<div class="doctor-item__clinic-name">
+												<a href="#">Клиника Диалайн</a>
+											</div>
+											<div class="doctor-item__clinic-address">ул. Краснознаменская 48</div>
+											<div class="doctor-item__clinic-price">
+												Прием от: <span>1400 ₽</span>
+											</div>
+										</div>
+										<div class="doctor-item__order">
+											<a href="#" class="btn btn-primary"><span>Записаться на прием</span></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-nav doctor-nav">
+							<div class="swiper-button-prev doctor-prev"></div>
+							<div class="swiper-button-next doctor-next"></div>
+							<div class="swiper-pagination doctor-pagination"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="advantage-section">
+					<div class="advantage-item">
+						<div class="advantage-item__num">430</div>
+						<div class="advantage-item__desc">государственных клиник в базе</div>
+					</div>
+					<div class="advantage-item">
+						<div class="advantage-item__num">4 970</div>
+						<div class="advantage-item__desc">практикующих врачей</div>
+					</div>
+					<div class="advantage-item">
+						<div class="advantage-item__num">325</div>
+						<div class="advantage-item__desc">государственных Check-UP программ</div>
+					</div>
+					<div class="advantage-item">
+						<div class="advantage-item__num">380</div>
+						<div class="advantage-item__desc">видов анализов</div>
+					</div>
+				</div>
+				
+				<div class="popular-section">
+					<h2>Популярно в <a href="#pp-city" class="dotted popup-with-zoom">Волгограде</a></h2>
+					<ul class="btn-group">
+						<li><a href="#" class="btn active">Услуги</a></li>
+						<li><a href="#" class="btn">Анализы</a></li>
+						<li><a href="#" class="btn">Программы</a></li>
+					</ul>
+					<div class="article-slider-wrap">
+						<div class="article-slider popular-slider swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="article-item">
+										<a href="#">
+											<div class="article-item__img">
+												<img src="/local/templates/docfarm/sample/popular1.jpg" alt="">   <!-- 360x210 -->
+											</div>
+											<div class="article-item__title">
+												Магнитно-резонансная томография (МРТ)
+											</div>
+											<div class="article-item__desc">
+												Современный вид лучевой диагностики с применением магнитного излучения
+											</div>
+											<div class="article-item__price">
+												от 2000 ₽
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="article-item">
+										<a href="#">
+											<div class="article-item__img">
+												<img src="/local/templates/docfarm/sample/popular2.jpg" alt="">
+											</div>
+											<div class="article-item__title">
+												Онлайн-консультации
+											</div>
+											<div class="article-item__desc">
+												Выберите врача и задайте ему вопросы в удобном формате
+											</div>
+											<div class="article-item__price">
+												от 300 ₽
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="article-item">
+										<a href="#">
+											<div class="article-item__img">
+												<img src="/local/templates/docfarm/sample/popular3.jpg" alt="">
+											</div>
+											<div class="article-item__title">
+												Ультразвуковое исследование (УЗИ)
+											</div>
+											<div class="article-item__desc">
+												Современный, безопасный, не использующий вредоносных излучений метод диагностики
+											</div>
+											<div class="article-item__price">
+												от 800 ₽
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="article-item">
+										<a href="#">
+											<div class="article-item__img">
+												<img src="/local/templates/docfarm/sample/popular4.jpg" alt="">
+											</div>
+											<div class="article-item__title">
+												Компьютерная томография (КТ)
+											</div>
+											<div class="article-item__desc">
+												Метод послойного исследования внутреннего строения органов
+											</div>
+											<div class="article-item__price">
+												от 1800 ₽
+											</div>
+										</a>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<div class="swiper-nav popular-nav">
+							<div class="swiper-button-prev popular-prev"></div>
+							<div class="swiper-button-next popular-next"></div>
+						</div>
+					</div>
+				</div>	<!-- End .popular-section -->
+				
+				<div class="interview-section">
+					<h2>Интервью ведущих врачей г.&nbsp;<a href="#pp-city" class="dotted popup-with-zoom">Волгограда</a></h2>
+					<div class="interview-slider-wrap">
+						<div class="interview-slider swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="interview-item">
+										<div class="interview-item__img">
+											<img src="/local/templates/docfarm/sample/interview1.jpg" alt=""> <!-- 148x148 -->
+										</div>
+										<div class="interview-item__desc">
+											<div class="interview-item__title">
+												<a href="#" class="dotted">idm clinic</a>
+											</div>
+											<div class="interview-item__text">
+												<div class="interview-item__text-inner">
+													<p>Мы вынуждены отталкиваться от того, что экономическая повестка сегодняшнего дня не даёт нам иного выбора, кроме определения направлений прогрессивного развития.</p>
+													<p><b>— Расскажите о том, как вы выбрали свою профессию?</b></p>
+													<p>Как принято считать, предприниматели в сети интернет освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. Каждый из нас понимает очевидную вещь: укрепление и  направлений прогрессив</p>
+												</div>
+											</div>
+											<div class="interview-item__readmore">
+												<a href="#" class="dotted">Читать полностью</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="interview-item">
+										<div class="interview-item__img">
+											<img src="/local/templates/docfarm/sample/interview2.jpg" alt="">
+										</div>
+										<div class="interview-item__desc">
+											<div class="interview-item__title">
+												<a href="#" class="dotted">Клиника Ткачева</a>
+											</div>
+											<div class="interview-item__text">
+												<div class="interview-item__text-inner">
+													<p>Мы вынуждены отталкиваться от того, что экономическая повестка сегодняшнего дня не даёт нам иного выбора, кроме определения направлений прогрессивного развития.</p>
+													<p><b>— Расскажите о том, как вы выбрали свою профессию?</b></p>
+													<p>Как принято считать, предприниматели в сети интернет освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. Каждый из нас понимает очевидную вещь: укрепление и  направлений прогрессив</p>
+												</div>
+											</div>
+											<div class="interview-item__readmore">
+												<a href="#" class="dotted">Читать полностью</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="interview-item">
+										<div class="interview-item__img">
+											<img src="/local/templates/docfarm/sample/interview1.jpg" alt=""> <!-- 148x148 -->
+										</div>
+										<div class="interview-item__desc">
+											<div class="interview-item__title">
+												<a href="#" class="dotted">idm clinic</a>
+											</div>
+											<div class="interview-item__text">
+												<div class="interview-item__text-inner">
+													<p>Мы вынуждены отталкиваться от того, что экономическая повестка сегодняшнего дня не даёт нам иного выбора, кроме определения направлений прогрессивного развития.</p>
+													<p><b>— Расскажите о том, как вы выбрали свою профессию?</b></p>
+													<p>Как принято считать, предприниматели в сети интернет освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. Каждый из нас понимает очевидную вещь: укрепление и  направлений прогрессив</p>
+												</div>
+											</div>
+											<div class="interview-item__readmore">
+												<a href="#" class="dotted">Читать полностью</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="interview-item">
+										<div class="interview-item__img">
+											<img src="/local/templates/docfarm/sample/interview2.jpg" alt="">
+										</div>
+										<div class="interview-item__desc">
+											<div class="interview-item__title">
+												<a href="#" class="dotted">Клиника Ткачева</a>
+											</div>
+											<div class="interview-item__text">
+												<div class="interview-item__text-inner">
+													<p>Мы вынуждены отталкиваться от того, что экономическая повестка сегодняшнего дня не даёт нам иного выбора, кроме определения направлений прогрессивного развития.</p>
+													<p><b>— Расскажите о том, как вы выбрали свою профессию?</b></p>
+													<p>Как принято считать, предприниматели в сети интернет освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. Каждый из нас понимает очевидную вещь: укрепление и  направлений прогрессив</p>
+												</div>
+											</div>
+											<div class="interview-item__readmore">
+												<a href="#" class="dotted">Читать полностью</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-nav interview-nav">
+							<div class="swiper-button-prev interview-prev"></div>
+							<div class="swiper-button-next interview-next"></div>
+							<div class="swiper-pagination interview-pagination"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="news-section">
+					<h2>Важно о здоровье</h2>
+					<div class="article-slider-wrap">
+						<div class="article-slider news-slider swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="article-item">
+										<a href="#">
+											<div class="article-item__img">
+												<img src="/local/templates/docfarm/sample/article1.jpg" alt="">   <!-- 360x210 -->
+											</div>
+											<div class="article-item__title">
+												Срочно к врачу: 8 признаков, что пора обратиться к кардиологу
+											</div>
+											<div class="article-item__desc">
+												По данным Всемирной организации здравоохранения, основная причина смерти в мире – сердечно-сосудистые заболевания.
+											</div>
+											<div class="article-item__info">
+												<div>2 февраля 2022</div>
+												<div>Комментариев: <span>105</span></div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="article-item">
+										<a href="#">
+											<div class="article-item__img">
+												<img src="/local/templates/docfarm/sample/article2.jpg" alt="">
+											</div>
+											<div class="article-item__title">
+												Резко закружилась голова — в чём причины?
+											</div>
+											<div class="article-item__desc">
+												Резкий подъем или быстрое движение головой могут вызвать целую бурю неприятных эмоций. Появляется ощущение, что весь мир начал вращаться.
+											</div>
+											<div class="article-item__info">
+												<div>8 февраля 2022</div>
+												<div>Комментариев: <span>1083</span></div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="article-item">
+										<a href="#">
+											<div class="article-item__img">
+												<img src="/local/templates/docfarm/sample/article3.jpg" alt="">
+											</div>
+											<div class="article-item__title">
+												Сонная терапия: как лечат сном
+											</div>
+											<div class="article-item__desc">
+												Об этом виде лечения знают не все, а между тем лечение сном практиковалось уже в конце XIX – начале XX века.
+											</div>
+											<div class="article-item__info">
+												<div>12 февраля 2022</div>
+												<div>Комментариев: <span>58</span></div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="article-item">
+										<a href="#">
+											<div class="article-item__img">
+												<img src="/local/templates/docfarm/sample/article4.jpg" alt="">
+												<div class="badge">Реклама</div>
+											</div>
+											<div class="article-item__title">
+												ОРВИ у детей: как избежать простуды
+											</div>
+											<div class="article-item__desc">
+												Препарат Назваль Плюс выпускается в удобной для применения форме – назального спрея. Образует защитный барьер на слизистой полости носа.
+											</div>
+											<div class="article-item__info">
+												<div>23 февраля 2022</div>
+												<div>Комментариев: <span>59</span></div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="article-item">
+										<a href="#">
+											<div class="article-item__img">
+												<img src="/local/templates/docfarm/sample/article2.jpg" alt="">
+											</div>
+											<div class="article-item__title">
+												Резко закружилась голова — в чём причины?
+											</div>
+											<div class="article-item__desc">
+												Резкий подъем или быстрое движение головой могут вызвать целую бурю неприятных эмоций. Появляется ощущение, что весь мир начал вращаться.
+											</div>
+											<div class="article-item__info">
+												<div>8 февраля 2022</div>
+												<div>Комментариев: <span>1083</span></div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="article-item">
+										<a href="#">
+											<div class="article-item__img">
+												<img src="/local/templates/docfarm/sample/article3.jpg" alt="">
+											</div>
+											<div class="article-item__title">
+												Сонная терапия: как лечат сном
+											</div>
+											<div class="article-item__desc">
+												Об этом виде лечения знают не все, а между тем лечение сном практиковалось уже в конце XIX – начале XX века.
+											</div>
+											<div class="article-item__info">
+												<div>12 февраля 2022</div>
+												<div>Комментариев: <span>58</span></div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-nav news-nav">
+							<div class="swiper-button-prev news-prev"></div>
+							<div class="swiper-button-next news-next"></div>
+						</div>
+					</div>
+				</div>	<!-- End .news-section -->
+				
+			</div>	<!-- End .container-fluid -->
+		</div>   <!-- End .wrapper -->
+		<footer>
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-2">
+						<div class="copyright">
+							<div class="copyright-img">
+								<a href="/"><img src="/local/templates/docfarm/i/logo-footer.svg" alt="DOC.farm"></a>
+							</div>
+							<div class="copyright-text">
+								© 2022 doc.farm
+							</div>
+						</div>
+					</div>
+					<div class="col-md-7">
+						<div class="footer-menu">
+							<div class="footer-menu__col">
+								<div class="footer-menu__head">
+									<a href="#" class="footer-menu__title">Пациентам<i class="icon-angle-down"></i></a> <!-- Ссылку можно заменить на span с этим же классом, если кликать по заголовку не надо -->
+								</div>
+								<div class="footer-menu__list">
+									<ul class="two-colums">
+										<li><a href="#">Врачи</a></li>
+										<li><a href="#">Клиники</a></li>
+										<li><a href="#">Cтатьи</a></li>
+										<li><a href="#">Анализы</a></li>
+										<li><a href="#">Услуги</a></li>
+										<li><a href="#">Телемедицина</a></li>
+										<li><a href="#">Диагностика</a></li>
+										<li><a href="#">Медтуризм</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="footer-menu__col">
+								<div class="footer-menu__head">
+									<a href="#" class="footer-menu__title">О проекте<i class="icon-angle-down"></i></a>
+								</div>
+								<div class="footer-menu__list">
+									<ul>
+										<li><a href="#">Что такое DocFarmMed</a></li>
+										<li><a href="#">Контакты</a></li>
+										<li><a href="#">Партнерство</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="footer-menu__col">
+								<div class="footer-menu__head">
+									<a href="#" class="footer-menu__title">Врачу<i class="icon-angle-down"></i></a>
+								</div>
+								<div class="footer-menu__list">
+									<ul>
+										<li><a href="#">Личный кабинет</a></li>
+										<li><a href="#">Регистрация</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<div class="site-support">
+							<div class="site-support__phone">
+								<a href="tel:+78442735003">+7 (8442) 73-50-03</a>
+							</div>
+							<div class="site-support__text">
+								<span>круглосуточная</span>
+								справочная служба
+							</div>
+						</div>
+						<div class="creators">
+							<a href="https://clickon.ru/" target="_blank" class="clickon-logo">
+								<span>Создание сайта</span>
+								<svg width="90" height="30" viewBox="0 0 90 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M86.6596 2.78197V12.0616L77.5016 2.78197H75.8531V18.1554H79.192V8.63639L88.5959 18.3613H90.0001V2.78197H86.6596ZM63.5036 0C57.8167 0 53.1909 4.41316 53.1909 9.83664C53.1909 15.2601 57.8167 19.6733 63.5036 19.6733C63.7915 19.6733 64.0794 19.6589 64.3622 19.6398L64.3873 15.8299C64.0994 15.8666 63.8015 15.889 63.5053 15.889C60.0041 15.889 57.159 13.1724 57.159 9.83664C57.159 6.49924 60.0041 3.78271 63.5053 3.78271C67.0031 3.78271 69.8499 6.49924 69.8499 9.83664C69.8499 11.8764 68.7822 13.688 67.1554 14.7813L69.8801 17.5601C72.2767 15.7581 73.818 12.9665 73.818 9.83664C73.8147 4.41316 69.1889 0 63.5036 0Z" class="path-color"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12.6374 2.58882L11.3738 5.00209C10.691 4.3493 9.59141 4.02689 8.07513 4.02689C6.6375 4.02689 5.45761 4.60148 4.53713 5.74587C3.61665 6.89026 3.15976 8.3379 3.15976 10.092C3.15976 11.8429 3.58318 13.2331 4.43839 14.2625C5.29025 15.2904 6.42998 15.8076 7.85421 15.8076C9.4843 15.8076 10.7546 15.2617 11.6767 14.1684L13.1043 16.529C11.8575 17.7819 10.0265 18.4124 7.61656 18.4124C5.20657 18.4124 3.33381 17.6574 2.00163 16.1475C0.667767 14.6344 0 12.5771 0 9.9675C0 7.53826 0.739732 5.50965 2.2192 3.87686C3.69866 2.24407 5.58815 1.42847 7.89605 1.42847C9.8709 1.42688 11.4508 1.81472 12.6374 2.58882Z" fill="#363333"/><path fill-rule="evenodd" clip-rule="evenodd" d="M15.8894 1.65536L18.8332 0.981812V14.4815C18.8332 15.9594 19.3002 16.8421 20.234 17.1262C19.7755 17.937 18.9972 18.3392 17.896 18.3392C16.5588 18.3392 15.8877 17.4613 15.8877 15.6977V1.65536H15.8894Z" fill="#363333"/><path fill-rule="evenodd" clip-rule="evenodd" d="M23.2832 18.1348V8.41151H21.6682V6.11794H26.2639V18.1348H23.2832ZM24.8112 1.45898C25.2782 1.45898 25.6832 1.61859 26.0162 1.93621C26.3493 2.25224 26.5166 2.63689 26.5166 3.08379C26.5166 3.53229 26.3476 3.91695 26.0162 4.23616C25.6832 4.55378 25.2798 4.7118 24.8112 4.7118C24.3393 4.7118 23.9376 4.55378 23.6046 4.23616C23.2715 3.91854 23.1042 3.53389 23.1042 3.08379C23.1042 2.63689 23.2715 2.25224 23.6046 1.93621C23.9359 1.62019 24.3393 1.45898 24.8112 1.45898Z" fill="#363333"/><path fill-rule="evenodd" clip-rule="evenodd" d="M39.5572 7.07541L38.2986 9.16627C37.6091 8.54859 36.6819 8.24055 35.5221 8.24055C34.4058 8.24055 33.5272 8.59328 32.8795 9.30034C32.2301 10.0058 31.9071 10.9842 31.9071 12.2323C31.9071 14.7526 33.169 16.0119 35.6928 16.0119C36.784 16.0119 37.7463 15.6591 38.5798 14.9521L39.6643 17.1786C38.8057 17.6846 38.0626 18.007 37.42 18.1426C36.7807 18.2767 36.0242 18.3421 35.1539 18.3421C33.2075 18.3421 31.6728 17.8027 30.5448 16.7269C29.4185 15.648 28.8545 14.1524 28.8545 12.2339C28.8545 10.349 29.4721 8.82312 30.7005 7.66117C31.9339 6.49603 33.6109 5.91506 35.733 5.91506C37.2024 5.91187 38.4727 6.29971 39.5572 7.07541Z" fill="#363333"/><path fill-rule="evenodd" clip-rule="evenodd" d="M50.0924 18.1349L46.372 12.6938L44.9578 14.1175V18.1349H42.0139V1.65536L44.9578 0.981812V10.7291L49.1568 6.118H52.7132L48.4439 10.6716L53.5735 18.1349H50.0924Z" fill="#363333"/><path d="M63.5035 12.9586C65.3115 12.9586 66.7771 11.5608 66.7771 9.83665C66.7771 8.11246 65.3115 6.71472 63.5035 6.71472C61.6956 6.71472 60.23 8.11246 60.23 9.83665C60.23 11.5608 61.6956 12.9586 63.5035 12.9586Z" fill="#363333"/><path fill-rule="evenodd" clip-rule="evenodd" d="M65.5922 15.0223L74.7619 24.3738L70.0942 24.1328L72.3 29.2721L70.6013 30L68.4825 24.5765L65.5068 27.2898L65.5922 15.0223Z" fill="#363333" class="path-arrow"/>
+								</svg>
+							</a>
+						</div>
+					</div>
+					
+						
+						
+					</div>
+				</div>
+		</footer>
+	</div>  <!-- End .all -->
+	
+	<a href="#" class="p-consultant-btn">Персональный мед. консультант</a>
+	<div class="p-consultant">
+		<div class="p-consultant-dialog">
+			<div class="p-consultant-title">Персональный мед. консультант</div>
+			<div class="p-consultant-text">
+				Хотите получить консультацию по подбору врачей, услуг или анализов?
+			</div>
+			<div class="p-consultant-dialog-btns">
+				<a href="#" class="btn btn-primary">Да</a>
+				<a href="#" class="btn consultant-close">Нет</a>
+			</div>
+		</div>
+		<div class="p-consultant-bottom">
+			<a href="#" class="dotted">Все интервью</a>
+		</div>
+	</div>
+	
+	<!-- Попап Выбор города -->
+	<div id="pp-city" class="position-relative d-inline-block zoom-anim-dialog mfp-hide pp-city">
+		<div class="pp-city__inner">
+			<div class="pp-content">
+				<div class="pp-city__header">
+					<div class="h4">Выберите город</div>
+					<div class="pp-city__header-current">
+						Текущий город: <span>Волгоград</span>
+					</div>
+				</div>
+				<div class="search-line">
+					<div class="search-form">
+						<form action="#">
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="text-field">
+									<input type="text" placeholder="Введите название города">
+								</div>
+								<input type="submit" class="btn btn-primary" value="Найти">
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="popular-cities">
+					<ul>
+						<li><a href="#" class="bigger">Москва</a></li>
+						<li><a href="#" class="bigger">Санкт Петербург</a></li>
+						<li><a href="#">Воронеж</a></li>
+						<li><a href="#">Екатеринбург</a></li>
+						<li><a href="#">Ижевск</a></li>
+						<li><a href="#">Калининград</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Казань</a></li>
+						<li><a href="#">Краснодар</a></li>
+						<li><a href="#">Красноярск</a></li>
+						<li><a href="#">Нижний Новгород</a></li>
+						<li><a href="#">Новосибирск</a></li>
+						<li><a href="#">Омск</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Пермь</a></li>
+						<li><a href="#">Ростов-на-Дону</a></li>
+						<li><a href="#">Самара</a></li>
+						<li><a href="#">Саратов</a></li>
+						<li><a href="#">Тольятти</a></li>
+						<li><a href="#">Ульяновск</a></li>
+					</ul>
+					<ul>
+						<li><a href="#">Уфа</a></li>
+						<li><a href="#">Челябинск</a></li>
+						<li><a href="#">Ярославль</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Попап Поиск по параметрам -->
+	<div id="pp-params" class="position-relative d-inline-block zoom-anim-dialog mfp-hide pp-params">
+		<div class="pp-params__inner">
+			<div class="pp-content">
+				<div class="h4">По параметрам</div>
+				<div class="pp-form">
+					<form action="#">
+						<div class="form-group">
+							<label for="param-address">Рядом с домом</label>
+							<input type="text" class="form-control" id="param-address" placeholder="Например: Ленина 10">
+						</div>
+						<div class="form-group">
+							<label for="param-speciality">Специализация врача</label>
+							<select id="param-speciality" class="form-control select-custom" data-placeholder="Все специализации">
+								<option value=""></option>
+								<option value="Терапевт">Терапевт</option>
+								<option value="Педиатр">Педиатр</option>
+								<option value="Хирург">Хирург</option>
+								<option value="Офтальмолог">Офтальмолог</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="param-service">Тип услуги</label>
+							<select id="param-service" class="form-control select-custom" data-placeholder="Все услуги">
+								<option value=""></option>
+								<option value="Терапия">Терапия</option>
+								<option value="Неврология">Неврология</option>
+								<option value="Гинекология">Гинекология</option>
+								<option value="Анализы">Анализы</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<div class="label">Кому берём</div>
+							<div class="form-check">
+								<input class="form-check-input" type="radio" name="param-whom" id="param-whom1" value="" checked="">
+								<label class="form-check-label" for="param-whom1">Мужчина</label>
+								<input class="form-check-input" type="radio" name="param-whom" id="param-whom2" value="" checked="">
+								<label class="form-check-label" for="param-whom2">Женщина</label>
+								<input class="form-check-input" type="radio" name="param-whom" id="param-whom3" value="" checked="">
+								<label class="form-check-label" for="param-whom3">Дети</label>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="param-disease">Что беспокоит</label>
+							<input type="text" class="form-control" id="param-disease" placeholder="Например: Головная боль">
+						</div>
+						<div class="form-group">
+							<label for="param-clinic">Тип клиники</label>
+							<select id="param-clinic" class="form-control select-custom" data-placeholder="Любая">
+								<option value=""></option>
+								<option value="Поликлиника">Поликлиника</option>
+								<option value="Больница">Больница</option>
+							</select>
+						</div>
+						<div class="form-group form-btns">
+							<input type="submit" class="btn btn-primary" value="Показать">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Попап Поликлиники на карте -->
+	<div id="pp-map" class="position-relative d-inline-block zoom-anim-dialog mfp-hide pp-map">
+		<div class="pp-map__inner">
+			<div class="pp-content">
+				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae99517423a2c48ab4ea3be62999e4e5342f00f7a4c80860829cb18bb6ce77b1e&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
+			</div>
+		</div>
+	</div>
+	
+	
+	<script src="/local/templates/docfarm/js/jquery.js"></script>
+	<script src="/local/templates/docfarm/js/bootstrap.bundle.min.js"></script>
+	<script src="/local/templates/docfarm/plugins/select2/select2.js"></script>
+	<script src="/local/templates/docfarm/js/cm.js"></script>
+	
+	<!-- Только для этой страницы: -->
+	<script src="/local/templates/docfarm/plugins/swiper/swiper-bundle.js"></script>
+	<script src="/local/templates/docfarm/plugins/swiper/swiper-bundle.min.js"></script>
+	<script src="/local/templates/docfarm/js/main.js"></script>
+	
+	
+
+	<!-- Для попапов -->
+	<script src="/local/templates/docfarm/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="/local/templates/docfarm/js/popups.js"></script>
+	
+</body>
+</html>

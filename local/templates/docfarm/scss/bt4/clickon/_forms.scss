@@ -1,0 +1,60 @@
+form label{
+	cursor: pointer;
+}
+.form-check {
+	padding-left: 0;
+	&-input{
+		opacity: 0;
+	}
+	&-input[type="checkbox"] + &-label, &-input[type="radio"] + &-label{
+		&::before{
+			content: '';
+			float: left;
+			width: 18px;
+			height: 18px;
+			border: $form-check-border-width solid $form-check-border-color;
+			margin-right: $form-check-input-gutter;
+		}
+		&::after{
+			content: '';
+			width: 5px;
+			height: 10px;
+			border: $form-check-mark-width solid $form-check-mark-color;
+			position: absolute;
+			left: 6px;
+			top: 3px;
+			transform: rotate(45deg);
+			border-top: none;
+			border-left: none;
+			display: none;
+		}
+		&:hover{
+			&::before{
+				background-color: $primary;
+				border-color: $primary;
+			}
+		}
+	}
+	&-input[type="radio"] + &-label{
+		&::before{
+			border-radius: 50%;
+		}
+		&::after{
+			width: 10px;
+			height: 10px;
+			background-color: $form-check-mark-color;
+			border-radius: 50%;
+			left: 4px;
+			top: 4px;
+		}
+	}
+}
+.form-check-input:checked + .form-check-label{
+	&::before{
+		background-color: $primary;
+		border-color: $primary;
+	}
+	&::after{
+		display: block;
+	}
+}

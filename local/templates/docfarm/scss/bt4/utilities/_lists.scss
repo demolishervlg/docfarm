@@ -1,0 +1,8 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+	@include media-breakpoint-up($breakpoint) {
+		$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+		.column-count#{$infix}-1  { column-count: 1 }
+		.column-count#{$infix}-2  { column-count: 2 }
+		.column-count#{$infix}-3  { column-count: 3 }
+	}
+}

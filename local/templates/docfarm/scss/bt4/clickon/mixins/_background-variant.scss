@@ -1,0 +1,24 @@
+@mixin triangle-up($color, $important : false){
+	content: '';
+	position: absolute;
+	bottom: -1px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 10px 10px 10px;
+	@if $important {
+	  border-color: transparent transparent $color transparent !important;
+	} @else {
+		border-color: transparent transparent $color transparent;
+	}
+
+	z-index: 1001;
+}
+
+@mixin bg-gradient-variant-mixed($parent, $color, $color2) {
+  #{$parent} {
+    background: $color linear-gradient(180deg, $color, $color2) repeat-x !important;
+  }
+}

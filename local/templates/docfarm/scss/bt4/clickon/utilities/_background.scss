@@ -1,0 +1,16 @@
+$mix-from:(
+	"primary-to-secondary":    $primary,
+	"secondary-to-primary":    $secondary
+);
+$mix-to:(
+	"primary-to-secondary":    $secondary,
+	"secondary-to-primary":    $primary
+);
+
+// @if $enable-gradients {
+	@each $color, $value in $mix-from {
+		// @include bg-gradient-variant-mixed(".bg-gradient-mixed-#{$color}", $value);
+		$to: map-get($mix-to, $color);
+		@include bg-gradient-variant-mixed(".bg-gradient-mixed-#{$color}", $value, $to);
+	}
+// }

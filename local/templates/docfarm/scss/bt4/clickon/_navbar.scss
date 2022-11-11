@@ -1,0 +1,25 @@
+.navbar-dark {
+	.navbar-nav {
+		.nav-link {
+			@include hover-focus {
+				background-color: $navbar-dark-hover-bgcolor;
+				border-color: $navbar-dark-hover-bgcolor;
+			}
+		}
+		.show > .nav-link,
+	    .nav-link.show {
+		  background-color: $navbar-dark-active-bgcolor;
+	    }
+		.active > .nav-link,
+		.nav-link.active{
+			@media(max-width: 992px){
+				background-color: $secondary;
+			}
+			&::before{
+				@media(min-width: 992px){
+					@include triangle-up($gray-100);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,61 @@
+@mixin preloader($size, $bg, $pbg, $zindex : 1){
+	position: relative;
+	&::before{
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: $bg;
+		z-index: $zindex;
+	}
+	&::after{
+		content: '';
+		width: $size;
+		height: $size;
+		background-color: $pbg;
+		border-radius: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		z-index: $zindex + 1;
+		transform: translate(-50%, -50%);
+		@include preloader-animation($size);
+	}
+}
+
+@mixin button-preloader($size, $bg, $pbg, $zindex : 1){
+	@include preloader($size, $bg, $pbg, $zindex : 1);
+	&::before{
+		border-radius: $btn-border-radius;
+	}
+}
+
+@mixin preloader-animation($size){
+	@-webkit-keyframes preloader-#{$size} {
+		0% {
+			width: 0;
+			height: 0;
+		}
+		100% {
+			width: $size;
+			height: $size;
+			opacity: 0;
+		}
+	}
+
+	@keyframes preloader-#{$size} {
+		0% {
+			width: 0;
+			height: 0;
+		}
+		100% {
+			width: $size;
+			height: $size;
+			opacity: 0;
+		}
+	}
+	-webkit-animation: preloader-#{$size} 1.5s infinite ease-in-out;
+	animation: preloader-#{$size} 1.5s infinite ease-in-out;
+}

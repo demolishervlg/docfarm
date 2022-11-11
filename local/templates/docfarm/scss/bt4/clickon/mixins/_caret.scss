@@ -1,0 +1,58 @@
+@mixin caret-down {
+	transform: rotate(90deg);
+}
+@mixin caret-up {
+	transform: rotate(-90deg);
+}
+
+@mixin caret-right {
+
+}
+
+@mixin caret-left {
+	transform: rotate(180deg);
+}
+@mixin caret($direction: down) {
+  @if $enable-caret {
+    &::after {
+      display: inline-block;
+	  font-family: 'icomoon' !important;
+	  margin-left: 10px;
+	  transition: $transition-base;
+      content: "\e912";
+
+      @if $direction == down {
+        @include caret-down;
+      } @else if $direction == up {
+        @include caret-up;
+      } @else if $direction == right {
+        @include caret-right;
+      }
+    }
+	&[aria-expanded="true"]{
+		&::after{
+			transform: rotate(-90deg);
+		}
+	}
+
+    @if $direction == left {
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-right: $caret-width * .85;
+        vertical-align: $caret-width * .85;
+        content: "";
+        @include caret-left;
+      }
+    }
+
+    &:empty::after {
+      margin-left: 0;
+    }
+  }
+}

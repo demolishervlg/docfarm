@@ -1,0 +1,11 @@
+@each $index, $value in $opacitys {
+  .op-#{$index}{
+	  opacity: $value;
+  }
+  .op-hover-#{$index}{
+	  transition: $transition-fade;
+	  &:hover{
+		 opacity: $value;
+	  }
+  }
+}

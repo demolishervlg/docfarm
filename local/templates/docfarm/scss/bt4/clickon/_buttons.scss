@@ -1,0 +1,58 @@
+.btn {
+	letter-spacing: 1.05px;
+	text-transform: uppercase;
+	background-color: transparent;
+	border-style: solid;
+	border-width: $border-width;
+	@include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
+	&:hover{
+		@include  button-outline-variant($secondary, $white);
+	}
+	&.hover-white:hover{
+		@include  button-outline-variant($white,$primary);
+	}
+	&.btn-secondary:hover{
+		@include  button-outline-variant($secondary-light,$white);
+	}
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled).active {
+		background-image: none;
+		@include box-shadow(none);
+		&:focus {
+			@include box-shadow(none);
+		}
+	}
+	&.hover-white:not(:disabled):not(.disabled):active,
+    &.hover-white:not(:disabled):not(.disabled).active {
+    background-image: none;
+  	background-color: $white;
+  	color: $primary !important;
+      // @include box-shadow($btn-active-box-shadow);
+
+      &:focus {
+        // @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+      }
+    }
+}
+.btn-link {
+	font-weight: $font-weight-bold;
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value);
+  }
+}
+.btn-lg {
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-line-height-lg, $btn-border-radius-lg);
+}
+
+.btn-sm {
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm);
+}
