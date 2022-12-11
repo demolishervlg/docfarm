@@ -21,7 +21,7 @@
     <!-- Только для этой страницы: -->
     <link rel="stylesheet" href="/local/templates/docfarm/plugins/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="/local/templates/docfarm/plugins/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/local/templates/docfarm/css/lpu.css">
+    <link rel="stylesheet" href="/local/templates/docfarm/scss/lpu.css">
 
 
     <!-- Для попапов -->
@@ -445,60 +445,53 @@
             <div class="lpu-info-block__inner">
                 <div class="lpu-info-block__content">
                     <div class="icon">
-                        <div class="img__inner">
+                        <div class="icon__img">
                             <img src="/local/templates/docfarm/sample/logo_lpu.png" alt="">
                         </div>
-                        <div class="rating">
-                            <div class="rating__inner">
-                                <div class="rating___inconstar">
-                                    <img src="/local/templates/docfarm/sample/Star.svg" alt="">
-                                </div>
-                                <div class="rating___cont">4,3</div>
-                            </div>
+                        <div class="icon__rating">
+                            4,3
                         </div>
-                        <div class="reviews">
-                            <div class="reviews__inner">
-                                <p>24 отзыва</p>
-                            </div>
+                        <div class="icon__reviews">
+                                <a href="#">24 отзыва</a>
                         </div>
                     </div>
                     <div class="desc">
                         <h1>S class clinic на ул. Хиросимы, д. 3 Б</h1>
-                        <div class="desc_test">
+                        <div class="desc_list">
                             <a href="">Медицинский центр</a>
                             <a href="">Детская поликлиника</a>
                         </div>
                         <div class="desc_types">
-                            <div class="type">Тип услуг: Платно</div>
-                            <div class="type">Тип оплаты: Картой, Наличные, На сайте, Рассрочка, Кредит</div>
+                            <div class="type">Тип услуг: <span>Платно</span></div>
+                            <div class="type">Тип оплаты: <span>Картой, Наличные, На сайте, Рассрочка, Кредит</span></div>
                         </div>
-                        <div class="lpu-imgs-slider-wrap">
-                            <div class="lpu-imgs-slider swiper-container">
+                        <div class="lpu_slider-wrap">
+                            <div class="lpu_slider swiper-container">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <div class="lpu-img-item">
-                                            <div class="lpu-img-item__img">
+                                        <div class="lpu_slider-item">
+                                            <div class="lpu_slider-item__img">
                                                 <img src="/local/templates/docfarm/sample/popular1.jpg" alt="">   <!-- 360x210 -->
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <div class="lpu-img-item">
-                                            <div class="lpu-img-item__img">
+                                        <div class="lpu_slider-item">
+                                            <div class="lpu_slider-item__img">
                                                 <img src="/local/templates/docfarm/sample/popular2.jpg" alt="">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <div class="lpu-img-item">
-                                            <div class="lpu-img-item__img">
+                                        <div class="lpu_slider-item">
+                                            <div class="lpu_slider-item__img">
                                                 <img src="/local/templates/docfarm/sample/popular3.jpg" alt="">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
-                                        <div class="lpu-img-item">
-                                            <div class="lpu-img-item__img">
+                                        <div class="lpu_slider-item">
+                                            <div class="lpu_slider-item__img">
                                                 <img src="/local/templates/docfarm/sample/popular4.jpg" alt="">
                                             </div>
                                         </div>
@@ -506,34 +499,60 @@
                                 </div>
                             </div>
                             <div class="swiper-nav lpu-imgs-nav">
-                                <div class="swiper-button-prev lpu-imgs-prev"></div>
-                                <div class="swiper-button-next lpu-imgs-next"></div>
+                                <div class="swiper-button-prev lpu_slider-prev"></div>
+                                <div class="swiper-button-next lpu_slider-next"></div>
                             </div>
                         </div>
                         <div class="lpu_desc">
                             <div class="lpu_desc__text">
-                                В медицинский центр «Эс Класс Клиник Волгоград» обращаются пациенты, чтобы избавиться от многих проблем со здоровьем. Наши высококлассные специалисты, большинство из которых имеют стаж работы по своей специальности более 20 лет, проведут детальную диагностику, выявят первопричину заболевания, помогут справиться с недугом самыми современными, эффективными и, что самое главное, малотравматичными методами.
+                                <p>
+                                    В медицинский центр «Эс Класс Клиник Волгоград» обращаются пациенты, чтобы избавиться от многих проблем со здоровьем. Наши высококлассные специалисты, большинство из которых имеют стаж работы по своей специальности более 20 лет, проведут детальную диагностику, выявят первопричину заболевания, помогут справиться с недугом самыми современными, эффективными и, что самое главное, малотравматичными методами.
+                                    В медицинский центр «Эс Класс Клиник Волгоград» обращаются пациенты, чтобы избавиться от многих проблем со здоровьем. Наши высококлассные специалисты, большинство из которых имеют стаж работы по своей специальности более 20 лет, проведут детальную диагностику, выявят первопричину заболевания, помогут справиться с недугом самыми современными, эффективными и, что самое главное, малотравматичными методами.
+                                    В медицинский центр «Эс Класс Клиник Волгоград» обращаются пациенты, чтобы избавиться от многих проблем со здоровьем. Наши высококлассные специалисты, большинство из которых имеют стаж работы по своей специальности более 20 лет, проведут детальную диагностику, выявят первопричину заболевания, помогут справиться с недугом самыми современными, эффективными и, что самое главное, малотравматичными методами.
+                                    В медицинский центр «Эс Класс Клиник Волгоград» обращаются пациенты, чтобы избавиться от многих проблем со здоровьем. Наши высококлассные специалисты, большинство из которых имеют стаж работы по своей специальности более 20 лет, проведут детальную диагностику, выявят первопричину заболевания, помогут справиться с недугом самыми современными, эффективными и, что самое главное, малотравматичными методами.
+                                    В медицинский центр «Эс Класс Клиник Волгоград» обращаются пациенты, чтобы избавиться от многих проблем со здоровьем. Наши высококлассные специалисты, большинство из которых имеют стаж работы по своей специальности более 20 лет, проведут детальную диагностику, выявят первопричину заболевания, помогут справиться с недугом самыми современными, эффективными и, что самое главное, малотравматичными методами.
+                                    В медицинский центр «Эс Класс Клиник Волгоград» обращаются пациенты, чтобы избавиться от многих проблем со здоровьем. Наши высококлассные специалисты, большинство из которых имеют стаж работы по своей специальности более 20 лет, проведут детальную диагностику, выявят первопричину заболевания, помогут справиться с недугом самыми современными, эффективными и, что самое главное, малотравматичными методами.
+                                    В медицинский центр «Эс Класс Клиник Волгоград» обращаются пациенты, чтобы избавиться от многих проблем со здоровьем. Наши высококлассные специалисты, большинство из которых имеют стаж работы по своей специальности более 20 лет, проведут детальную диагностику, выявят первопричину заболевания, помогут справиться с недугом самыми современными, эффективными и, что самое главное, малотравматичными методами.
+                                    В медицинский центр «Эс Класс Клиник Волгоград» обращаются пациенты, чтобы избавиться от многих проблем со здоровьем. Наши высококлассные специалисты, большинство из которых имеют стаж работы по своей специальности более 20 лет, проведут детальную диагностику, выявят первопричину заболевания, помогут справиться с недугом самыми современными, эффективными и, что самое главное, малотравматичными методами.
+                                    В медицинский центр «Эс Класс Клиник Волгоград» обращаются пациенты, чтобы избавиться от многих проблем со здоровьем. Наши высококлассные специалисты, большинство из которых имеют стаж работы по своей специальности более 20 лет, проведут детальную диагностику, выявят первопричину заболевания, помогут справиться с недугом самыми современными, эффективными и, что самое главное, малотравматичными методами.
+
+                                    В медицинский центр «Эс Класс Клиник Волгоград» обращаются пациенты, чтобы избавиться от многих проблем со здоровьем. Наши высококлассные специалисты, большинство из которых имеют стаж работы по своей специальности более 20 лет, проведут детальную диагностику, выявят первопричину заболевания, помогут справиться с недугом самыми современными, эффективными и, что самое главное, малотравматичными методами.
+                                </p>
+                                <div class="lpu_desc__readmore">
+                                    <a href="#" class="dotted">Читать полностью</a>
+                                </div>
                             </div>
                         </div>
 
                     </div>
                     <div class="map">
-                        <div class="map_picture">
+                        <div class="map__picture">
                             <img src="/local/templates/docfarm/sample/map.png" alt="">
                         </div>
-                        <div class="map_address">
-                            <ul class="address-item__list">
-                                <li><a href="#"><img src="/local/templates/docfarm/sample/icon_address.svg" alt="">ул. Хиросимы, д. 3 Б</a></li>
-                                <li><a href="#"><img src="/local/templates/docfarm/sample/icon_address.svg" alt="">ул. Хиросимы, д. 3 Б</a></li>
-                                <li><a href="#"><img src="/local/templates/docfarm/sample/icon_address.svg" alt="">ул. Хиросимы, д. 3 Б</a></li>
-                            </ul>
-                        </div>
-                        <div class="map_phone">
-                            <div class="phone">+7 (8442) 50-58-XX</div>
-                            <a href="">показать телефон</a>
-                        </div>
-                        <div class="btn-disappears">
+                        <div class="map__desc">
+                            <div class="map__desc-address">
+                                <ul class="address-item__list">
+                                    <li class="adr">
+                                        ул. Хиросимы, д. 3 Б
+                                    </li>
+                                    <li class="time">
+                                        Сб-Вс: 8:30 - 17:00<br>
+                                        Пн-Пт: 8:30 - 20:00
+                                    </li>
+                                    <li class="link">
+                                        <a href="#">
+                                            s-classclinic.com
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="map__desc-phone">
+                                <div class="phone">+7 (8442) 50-58-XX</div>
+                                <a href="">показать телефон</a>
+                            </div>
+                            <div class="map__desc-btn">
                                 <a href="#" class="btn btn-primary"><span>Записаться на прием</span></a>   
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -541,6 +560,653 @@
         </div>
     </div>
 
+    <div class="filter-block">
+        <div class="container-fluid">
+            <div class="filter-block__inner">
+                <h2>Врачи</h2>
+                <div class="filter-block__content">
+                    <h3>Фильтр для поиска специалистов</h2>
+                    <form action="#">
+                        <div class="items-fields">
+                            <div class="form-group">
+                                <label for="param-address">Специализация</label>
+                                <select id="param-speciality" class="form-control select-custom" data-placeholder="Все специализации">
+                                    <option value=""></option>
+                                    <option value="Терапевт">Терапевт</option>
+                                    <option value="Педиатр">Педиатр</option>
+                                    <option value="Хирург">Хирург</option>
+                                    <option value="Офтальмолог">Офтальмолог</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="param-address">Лечебное учреждение</label>
+                                <select id="param-speciality" class="form-control select-custom" data-placeholder="Все ЛПУ">
+                                    <option value=""></option>
+                                    <option value="Терапевт">Терапевт</option>
+                                    <option value="Педиатр">Педиатр</option>
+                                    <option value="Хирург">Хирург</option>
+                                    <option value="Офтальмолог">Офтальмолог</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="param-address">Услуга</label>
+                                <select id="param-service" class="form-control select-custom" data-placeholder="Все услуги">
+                                    <option value=""></option>
+                                    <option value="Терапия">Терапия</option>
+                                    <option value="Неврология">Неврология</option>
+                                    <option value="Гинекология">Гинекология</option>
+                                    <option value="Анализы">Анализы</option>
+                                </select>                            
+                            </div>
+                            <div class="form-group">
+                                <label for="param-address">Заболевание</label>
+                                <select id="param-service" class="form-control select-custom" data-placeholder="Все заболевания">
+                                    <option value=""></option>
+                                    <option value="Терапия">Терапия</option>
+                                    <option value="Неврология">Неврология</option>
+                                    <option value="Гинекология">Гинекология</option>
+                                    <option value="Анализы">Анализы</option>
+                                </select>                            
+                            </div>
+                            <div class="form-group">
+                                <label for="param-address">Врач</label>
+                                <select id="param-service" class="form-control select-custom" data-placeholder="Любой">
+                                    <option value=""></option>
+                                    <option value="Терапия">Терапия</option>
+                                    <option value="Неврология">Неврология</option>
+                                    <option value="Гинекология">Гинекология</option>
+                                    <option value="Анализы">Анализы</option>
+                                </select>                            
+                            </div>
+                        </div>
+                        <div class="form-group">
+							<div class="form-check lpu-filter">
+								<input class="form-check-input" type="checkbox" name="param-whom" id="param-whom1" value="" >
+								<label class="form-check-label" for="param-whom1">Выезд на дом</label>
+								<input class="form-check-input" type="checkbox" name="param-whom" id="param-whom2" value="">
+								<label class="form-check-label" for="param-whom2">Детский врач</label>
+								<input class="form-check-input" type="checkbox" name="param-whom" id="param-whom3" value="">
+								<label class="form-check-label" for="param-whom3">Рядом с вами</label>
+                                <input class="form-check-input" type="checkbox" name="param-whom" id="param-whom4" value="">
+								<label class="form-check-label" for="param-whom4">Онлайн консультация</label>
+                                <a href="#">Выбрать адрес</a>
+							</div>
+						</div>
+                        <div class="filter-answer">
+                            <div class="form-group form-btns lpu-filter">
+                                <input type="submit" class="btn btn-primary" value="Найти">
+                                <a href="#">Сбросить настройки</a>
+                            </div>
+                            <div class="form-group form-btns lpu-filter-return">
+                                Найдено 99 записей
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="doctors-section">
+        <div class="container-fluid">
+            <div class="doctors-section__content">
+                <div class="doctors-section__content-sortint">
+                    <a href="#">по рейтингу</a>
+                    <a href="#">по популярности</a>
+                    <a href="#">по возрастанию цены</a>
+                    <a href="#">по убыванию цены</a>
+                </div>
+                <div class="doctors-section__content-items">
+                    <div class="doctors-section__content-item">
+                        <div class="icon">
+                            <div class="icon__img">
+                                <img src="/local/templates/docfarm/sample/imgDoc.png" alt="">
+                            </div>
+                            <div class="icon__rating">
+                                4,3
+                            </div>
+                            <div class="icon__reviews">
+                                <a href="#">24 отзыва</a>
+                            </div>
+                        </div>
+                        <div class="desc">
+                            <div class="desc__name">
+                                Елизарова Людмила Александровна
+                            </div>
+                            <div class="desc__specialization">
+                                <div class="specialization-items">
+                                    <div class="specialization-item">
+                                        Акушер
+                                    </div>
+                                    <div class="specialization-item">
+                                        Гинеколог
+                                    </div>
+                                    <div class="specialization-item">
+                                        Гинеколог-эндокринолог
+                                    </div>
+                                    <div class="specialization-item">
+                                        УЗИ-специалист
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="desc__education">
+                                <div class="education-items">
+                                    <div class="education-item">
+                                        Стаж 26 лет.
+                                    </div>
+                                    <div class="education-item">
+                                        Врач высшей категории.
+                                    </div>
+                                    <div class="education-item">
+                                        Кандидат медицинских наук.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="desc__notification">
+                                <div class="notification-items">
+                                    <div class="notification-item">
+                                        Сегодня к этому врачу записалось 5 человек
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="desc__text">
+                                <p>«Прием мне понравился. Времени мне уделили достаточно. Врач квалифицированный. Доктор оказал мне нужную помощь и сделал правильные анализы. При необходимости повторно я обращусь к этому специалисту.»</p>
+                            </div>
+                        </div>
+                        <div class="timetable">
+                            <div class="timetable__price">
+                                <p>Расписание и цена зависит от типа приема:</p>
+                                <div class="buttons">
+                                    <a href="#" class="btn btn-timetable-price active"><span>В клинике: <span class="price">550 ₽</span></span></a>
+                                    <a href="#" class="btn btn-timetable-price"><span>На дому: <span class="price">900 ₽</span> <span class="old-price">1200</span> <span class="sale">-20%</span></span></a>
+                                </div>
+                            </div>
+                            <div class="timetable__date">
+                                <p>Дата приема:</p>
+                                    <div class="date-slider-wrap">
+                                        <div class="date-slider ">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item active">
+                                                        <span>сегодня</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>завтра</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>Ср. 24 сентября</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>Чт. 25 сентября</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>Чт. 25 сентября</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>Чт. 25 сентября</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>Чт. 25 сентября</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>Чт. 25 сентября</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-nav date-nav">
+                                            <div class="swiper-button-prev date-prev"></div>
+                                            <div class="swiper-button-next date-next"></div>
+                                        </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="timetable__time">
+                                <div class="time-items">
+                                    <a href="#" class="btn time-item"><span>14:30</span></a>                                    
+                                    <a href="#" class="btn time-item"><span>15:00</span></a>
+                                    <a href="#" class="btn time-item"><span>15:30</span></a>
+                                    <a href="#" class="btn time-item"><span>15:30</span></a>
+                                    <a href="#" class="btn time-item"><span>16:00</span></a>
+                                    <a href="#" class="btn time-item"><span>16:30</span></a>
+                                    <a href="#" class="btn time-item"><span>17:00</span></a>
+                                    <a href="#" class="btn time-item"><span>17:30</span></a>
+                                </div>
+                            </div>
+                            <div class="timetable__phone">
+                                <p>Телефон для записи:</p>
+                                <ul class="phone-items">
+                                    <li class="phone-item">+7 (8442) 50-58-XX  <a href="#">показать</a></li>
+                                </ul>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctors-section__content-item">
+                        <div class="icon">
+                            <div class="icon__img">
+                                <img src="/local/templates/docfarm/sample/imgDoc.png" alt="">
+                            </div>
+                            <div class="icon__rating">
+                                4,3
+                            </div>
+                            <div class="icon__reviews">
+                                <a href="#">24 отзыва</a>
+                            </div>
+                        </div>
+                        <div class="desc">
+                            <div class="desc__name">
+                                Елизарова Людмила Александровна
+                            </div>
+                            <div class="desc__specialization">
+                                <div class="specialization-items">
+                                    <div class="specialization-item">
+                                        Акушер
+                                    </div>
+                                    <div class="specialization-item">
+                                        Гинеколог
+                                    </div>
+                                    <div class="specialization-item">
+                                        Гинеколог-эндокринолог
+                                    </div>
+                                    <div class="specialization-item">
+                                        УЗИ-специалист
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="desc__education">
+                                <div class="education-items">
+                                    <div class="education-item">
+                                        Стаж 26 лет.
+                                    </div>
+                                    <div class="education-item">
+                                        Врач высшей категории.
+                                    </div>
+                                    <div class="education-item">
+                                        Кандидат медицинских наук.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="desc__notification">
+                                <div class="notification-items">
+                                    <div class="notification-item">
+                                        Сегодня к этому врачу записалось 5 человек
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="desc__text">
+                                <p>«Прием мне понравился. Времени мне уделили достаточно. Врач квалифицированный. Доктор оказал мне нужную помощь и сделал правильные анализы. При необходимости повторно я обращусь к этому специалисту.»</p>
+                            </div>
+                        </div>
+                        <div class="timetable">
+                            <div class="timetable__price">
+                                <p>Расписание и цена зависит от типа приема:</p>
+                                <div class="buttons">
+                                    <a href="#" class="btn btn-timetable-price active"><span>В клинике: <span class="price">550 ₽</span></span></a>
+                                    <a href="#" class="btn btn-timetable-price"><span>На дому: <span class="price">900 ₽</span> <span class="old-price">1200</span> <span class="sale">-20%</span></span></a>
+                                </div>
+                            </div>
+                            <div class="timetable__date">
+                                <p>Дата приема:</p>
+                                    <div class="date-slider-wrap">
+                                        <div class="date-slider ">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item active">
+                                                        <span>сегодня</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>завтра</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>Ср. 24 сентября</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>Чт. 25 сентября</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>Чт. 25 сентября</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>Чт. 25 сентября</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>Чт. 25 сентября</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>Чт. 25 сентября</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-nav date-nav">
+                                            <div class="swiper-button-prev date-prev"></div>
+                                            <div class="swiper-button-next date-next"></div>
+                                        </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="timetable__time">
+                                <div class="time-items">
+                                    <a href="#" class="btn time-item"><span>14:30</span></a>                                    
+                                    <a href="#" class="btn time-item"><span>15:00</span></a>
+                                    <a href="#" class="btn time-item"><span>15:30</span></a>
+                                    <a href="#" class="btn time-item"><span>15:30</span></a>
+                                    <a href="#" class="btn time-item"><span>16:00</span></a>
+                                    <a href="#" class="btn time-item"><span>16:30</span></a>
+                                    <a href="#" class="btn time-item"><span>17:00</span></a>
+                                    <a href="#" class="btn time-item"><span>17:30</span></a>
+                                </div>
+                            </div>
+                            <div class="timetable__phone">
+                                <p>Телефон для записи:</p>
+                                <ul class="phone-items">
+                                    <li class="phone-item">+7 (8442) 50-58-XX  <a href="#">показать</a></li>
+                                </ul>
+                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctors-section__content-item">
+                        <div class="icon">
+                            <div class="icon__img">
+                                <img src="/local/templates/docfarm/sample/imgDoc.png" alt="">
+                            </div>
+                            <div class="icon__rating">
+                                4,3
+                            </div>
+                            <div class="icon__reviews">
+                                <a href="#">24 отзыва</a>
+                            </div>
+                        </div>
+                        <div class="desc">
+                            <div class="desc__name">
+                                Елизарова Людмила Александровна
+                            </div>
+                            <div class="desc__specialization">
+                                <div class="specialization-items">
+                                    <div class="specialization-item">
+                                        Акушер
+                                    </div>
+                                    <div class="specialization-item">
+                                        Гинеколог
+                                    </div>
+                                    <div class="specialization-item">
+                                        Гинеколог-эндокринолог
+                                    </div>
+                                    <div class="specialization-item">
+                                        УЗИ-специалист
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="desc__education">
+                                <div class="education-items">
+                                    <div class="education-item">
+                                        Стаж 26 лет.
+                                    </div>
+                                    <div class="education-item">
+                                        Врач высшей категории.
+                                    </div>
+                                    <div class="education-item">
+                                        Кандидат медицинских наук.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="desc__notification">
+                                <div class="notification-items">
+                                    <div class="notification-item">
+                                        Сегодня к этому врачу записалось 5 человек
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="desc__text">
+                                <p>«Прием мне понравился. Времени мне уделили достаточно. Врач квалифицированный. Доктор оказал мне нужную помощь и сделал правильные анализы. При необходимости повторно я обращусь к этому специалисту.»</p>
+                            </div>
+                        </div>
+                        <div class="timetable">
+                            <div class="timetable__price">
+                                <p>Расписание и цена зависит от типа приема:</p>
+                                <div class="buttons">
+                                    <a href="#" class="btn btn-timetable-price active"><span>В клинике: <span class="price">550 ₽</span></span></a>
+                                    <a href="#" class="btn btn-timetable-price"><span>На дому: <span class="price">900 ₽</span> <span class="old-price">1200</span> <span class="sale">-20%</span></span></a>
+                                </div>
+                            </div>
+                            <div class="timetable__date">
+                                <p>Дата приема:</p>
+                                    <div class="date-slider-wrap">
+                                        <div class="date-slider ">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item active">
+                                                        <span>сегодня</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>завтра</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>Ср. 24 сентября</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>Чт. 25 сентября</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>Чт. 25 сентября</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>Чт. 25 сентября</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>Чт. 25 сентября</span>
+                                                    </a>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <a href="#" class="btn date-slider-item">
+                                                        <span>Чт. 25 сентября</span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-nav date-nav">
+                                            <div class="swiper-button-prev date-prev"></div>
+                                            <div class="swiper-button-next date-next"></div>
+                                        </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="timetable__time">
+                                <div class="time-items">
+                                    <a href="#" class="btn time-item"><span>14:30</span></a>                                    
+                                    <a href="#" class="btn time-item"><span>15:00</span></a>
+                                    <a href="#" class="btn time-item"><span>15:30</span></a>
+                                    <a href="#" class="btn time-item"><span>15:30</span></a>
+                                    <a href="#" class="btn time-item"><span>16:00</span></a>
+                                    <a href="#" class="btn time-item"><span>16:30</span></a>
+                                    <a href="#" class="btn time-item"><span>17:00</span></a>
+                                    <a href="#" class="btn time-item"><span>17:30</span></a>
+                                </div>
+                            </div>
+                            <div class="timetable__phone">
+                                <p>Телефон для записи:</p>
+                                <ul class="phone-items">
+                                    <li class="phone-item">+7 (8442) 50-58-XX  <a href="#">показать</a></li>
+                                </ul>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+
+
+    <div class="analyzes-block">
+        <div class="container-fluid">
+            <div class="analyzes-block__inner">
+                <h2>Анализы</h2>
+                <div class="analyzes-block__content">
+                    <div class="analyzes-order">
+						<form action="#">
+							<div class="analyzes-order__list">
+                                <div class="form-group analyzes-order__item">
+										<div class="form-check-label titleTabele">
+											<span class="analyzes-order__title">Название</span>
+                                            <span class="analyzes-order__price">Цена</span>
+                                        </div>
+								</div>
+								<div class="form-group analyzes-order__item">
+									<div class="form-check">
+										<input class="form-check-input" id="analyzes-order1" type="hidden" name="analyzes-order" value="">
+										<label class="form-check-label" for="analyzes-order1">
+											<span class="analyzes-order__title">Определение антител IgG (количественное) к штамму SARS CoV-2 коронавируса (SARS-CoV-2 IgG)</span>
+											<span class="analyzes-order__price">750 ₽</span>
+										</label>
+                                        <a href="#" class="btn btn-border"><img src="/local/templates/docfarm/i/addorder.svg" alt="В корзину"></a>
+									</div>
+								</div>
+                                <div class="form-group analyzes-order__item">
+									<div class="form-check">
+										<input class="form-check-input" id="analyzes-order2" type="hidden" name="analyzes-order" value="">
+										<label class="form-check-label" for="analyzes-order2">
+											<span class="analyzes-order__title">*aHDV IgM (Антитела к вирусу гепатита D)</span>
+											<span class="analyzes-order__price">660 ₽</span>
+										</label>
+                                        <a href="#" class="btn btn-border"><img src="/local/templates/docfarm/i/addorder.svg" alt="В корзину"></a>
+									</div>
+								</div>
+                                <div class="form-group analyzes-order__item">
+									<div class="form-check">
+										<input class="form-check-input" id="analyzes-order3" type="hidden" name="analyzes-order" value="">
+										<label class="form-check-label" for="analyzes-order3">
+											<span class="analyzes-order__title">*aHDV IgM+IgG (Антитела к вирусу гепатита D суммарные)</span>
+											<span class="analyzes-order__price">600 ₽</span>
+										</label>
+                                        <a href="#" class="btn btn-border"><img src="/local/templates/docfarm/i/addorder.svg" alt="В корзину"></a>
+									</div>
+								</div>
+                                <div class="form-group analyzes-order__item">
+									<div class="form-check">
+										<input class="form-check-input" id="analyzes-order4" type="hidden" name="analyzes-order" value="">
+										<label class="form-check-label" for="analyzes-order4">
+											<span class="analyzes-order__title">*aНGV-IgG</span>
+											<span class="analyzes-order__price">500 ₽</span>
+										</label>
+                                        <a href="#" class="btn btn-border"><img src="/local/templates/docfarm/i/addorder.svg" alt="В корзину"></a>
+									</div>
+								</div>
+                                <div class="form-group analyzes-order__item">
+									<div class="form-check">
+										<input class="form-check-input" id="analyzes-order4" type="hidden" name="analyzes-order" value="">
+										<label class="form-check-label" for="analyzes-order4">
+											<span class="analyzes-order__title">Определение антител IgG (количественное) к штамму SARS CoV-2 коронавируса (SARS-CoV-2 IgG)</span>
+											<span class="analyzes-order__price">500 ₽</span>
+										</label>
+                                        <a href="#" class="btn btn-border"><img src="/local/templates/docfarm/i/addorder.svg" alt="В корзину"></a>
+									</div>
+								</div>
+                                <div class="form-group analyzes-order__item">
+									<div class="form-check">
+										<input class="form-check-input" id="analyzes-order4" type="hidden" name="analyzes-order" value="В корзину">
+										<label class="form-check-label" for="analyzes-order4">
+											<span class="analyzes-order__title">*aНGV-IgG</span>
+											<span class="analyzes-order__price">500 ₽</span>
+										</label>
+                                        <a href="#" class="btn btn-border"><img src="/local/templates/docfarm/i/addorder.svg" alt="В корзину"></a>
+									</div>
+								</div>
+                                <div class="form-group analyzes-order__item">
+									<div class="form-check">
+										<input class="form-check-input" id="analyzes-order4" type="hidden" name="analyzes-order" value="">
+										<label class="form-check-label" for="analyzes-order4">
+											<span class="analyzes-order__title">Определение антител IgG (количественное) к штамму SARS CoV-2 коронавируса (SARS-CoV-2 IgG)</span>
+											<span class="analyzes-order__price">500 ₽</span>
+										</label>
+                                        <a href="#" class="btn btn-border"><img src="/local/templates/docfarm/i/addorder.svg" alt="В корзину"></a>
+									</div>
+								</div>
+                                <div class="form-group analyzes-order__item">
+									<div class="form-check">
+										<input class="form-check-input" id="analyzes-order4" type="hidden" name="analyzes-order" value="">
+										<label class="form-check-label" for="analyzes-order4">
+											<span class="analyzes-order__title">*aНGV-IgG</span>
+											<span class="analyzes-order__price">500 ₽</span>
+										</label>
+                                        <a href="#" class="btn btn-border"><img src="/local/templates/docfarm/i/addorder.svg" alt="В корзину"></a>
+									</div>
+								</div>
+                                <div class="form-group analyzes-order__item">
+									<div class="form-check">
+										<input class="form-check-input" id="analyzes-order4" type="hidden" name="analyzes-order" value="">
+										<label class="form-check-label" for="analyzes-order4">
+											<span class="analyzes-order__title">Определение антител IgG (количественное) к штамму SARS CoV-2 коронавируса (SARS-CoV-2 IgG)</span>
+											<span class="analyzes-order__price">500 ₽</span>
+										</label>
+                                        <a href="#" class="btn btn-border"><img src="/local/templates/docfarm/i/addorder.svg" alt="В корзину"></a>
+									</div>
+								</div>
+                                <div class="form-group analyzes-order__item">
+									<div class="form-check">
+										<input class="form-check-input" id="analyzes-order4" type="hidden" name="analyzes-order" value="">
+										<label class="form-check-label" for="analyzes-order4">
+											<span class="analyzes-order__title">*aНGV-IgG</span>
+											<span class="analyzes-order__price">500 ₽</span>
+										</label>
+                                        <a href="#" class="btn btn-border"><img src="/local/templates/docfarm/i/addorder.svg" alt="В корзину"></a>
+									</div>
+								</div>
+
+                            </div>
+                        </form>
+                    </div>
+                    <a href="#" class="showmore-btn">Показать еще</a>
+                </div>
+            </div>
+        </div>
+    </div>                    
 
 
 
@@ -812,7 +1478,7 @@
 <!-- Только для этой страницы: -->
 <script src="/local/templates/docfarm/plugins/swiper/swiper-bundle.js"></script>
 <script src="/local/templates/docfarm/plugins/swiper/swiper-bundle.min.js"></script>
-<script src="/local/templates/docfarm/js/main.js"></script>
+<script src="/local/templates/docfarm/js/lpu.js"></script>
 
 
 <!-- Для попапов -->
